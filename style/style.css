@@ -20,15 +20,17 @@ ul {
 /* Reset 끝 */
 
 /* Guide line 시작 */
-div#wrap    { border: 1px solid #000; }
+/*div#wrap    { border: 1px solid #000; }*/
 /*nav#gnb     { border: 1px solid #000; }*/
+/*div#left      { border: 1px solid #f80; }*/
+/*div#galleryList { border: 4px solid #08f; }*/
 /* Guide line 끝 */
 
 
 
 /* div#wrap 전체영역 시작 */
 div#wrap {
-    width: 1160px;
+    width: 1060px;
     margin: 0 auto;
 }
 /* div#wrap 전체영역 끝 */
@@ -80,16 +82,55 @@ main#main {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+
+    justify-content: space-between;
 }
+
+    /* div#left 시작 */
+div#left {
+    width: 390px;
+}
+    /* div#left 끝 */
 
 
     /* div#galleryList 시작 */
 div#galleryList {
+    width: 630px;
+
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+div#galleryList div.galleryArticle {
+    width: 200px;
+    text-align: center;
+    /*border: 4px solid #f00;*/
+}
+
+#galleryList .galleryArticle span.leadTxt {
+    color: #a07a56;
+    font-size: 12px;
+    font-weight: bold;
+}
+#galleryList .galleryArticle span.goodsName {
+    font-size: 12px;
+    /*font-weight: bold;*/
+}
+#galleryList .galleryArticle span.price {
+    color: #208a88;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+#galleryList .galleryArticle span.price::after {
+    content: " 원";
+    font-size: 16px;
 }
     /* div#galleryList 끝 */
 
