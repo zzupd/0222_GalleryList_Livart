@@ -20,18 +20,19 @@
 
         /* 모달 레이어 팝업 시작 */
             $("#galleryList .galleryArticle").click(function(){
-                var idx = $(this).index();
+                var src = $(this).children("img").attr("src");
+                var alt = $(this).children("img").attr("alt");
+                var leadTxt = $(this).children("span.leadTxt").text();
+                var goodsName = $(this).children("span.goodsName").text();
+                var price = $(this).children("span.price").text();
 
-                switch (idx) {
-                    case 0:
-                    $("div#idx0").css({"display": "block"});
-                    break;
+                $(".modalArticle>img").attr("src", src);
+                $(".modalArticle>img").attr("alt", alt);
+                $(".modalArticle>span.modalLeadTxt").text(leadTxt);
+                $(".modalArticle>span.modalGoodsName").text(goodsName);
+                $(".modalArticle>span.modalPrice").text(price);
 
-                    case 1:
-                    $("div#idx1").css({"display": "block"});
-                    break;
-                }
-
+                $(".modalBackground").css({"display": "block"});
             });
 
             $(".modalBackground>.modalArticle span.closeBtn").click(function(){
@@ -167,38 +168,13 @@
 
 
     <!-- 모달레이어 팝업 소스 위치 시작 -->
-    <div class="modalBackground" id="idx0">
+    <div class="modalBackground">
         <div class="modalArticle">
-            <img src="images/list_02_615x615.jpg" alt="모달용원본이미지1" width="400">
-            <span class="modalLeadTxt">[리바트온라인]</span>
-            <span class="modalGoodsName">
-                솔브 4인 헤드틸팅
-                리클라이너
-                소파(양면형, 3색/택1)
-            </span>
-            <span class="modalPrice">
-                835,100
-            </span>
+            <img src="" alt="" width="400">
+            <span class="modalLeadTxt"></span>
+            <span class="modalGoodsName"></span>
+            <span class="modalPrice"></span>
             <span class="closeBtn">&times;</span>
         </div>
     </div>
-
-
-    <div class="modalBackground" id="idx1">
-        <div class="modalArticle">
-            <img src="images/list_03_615x615.jpg" alt="모달용원본이미지2" width="400">
-            <span class="modalLeadTxt">[리바트온라인]</span>
-            <span class="modalGoodsName">
-                뉴 레가토 4인 리클라이너
-                소파 양면형 3색 택1
-            </span>
-            <span class="modalPrice">
-                1,059,300
-            </span>
-            <span class="closeBtn">&times;</span>
-        </div>
-    </div>
-
-
-
 </body></html>
