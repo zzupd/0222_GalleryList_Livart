@@ -45,7 +45,7 @@ header#header {
     line-height: 100px;
 }
 nav#gnb {
-    width: 690px;
+    width: 820px;
     margin: 16px auto;
 }
 nav#gnb>#mainMenu>li {
@@ -69,7 +69,8 @@ nav#gnb>#mainMenu>li:not(:last-child)::after {
 
 }
 nav#gnb>#mainMenu>li a {
-    font-size: 12px;
+    font-size: 16px;
+/*    border: 1px solid #000;*/
 }
 /* header#header 끝 */
 
@@ -110,6 +111,8 @@ div#galleryList div.galleryArticle {
     width: 200px;
     text-align: center;
     /*border: 4px solid #f00;*/
+
+    cursor: pointer;
 }
 
 #galleryList .galleryArticle span.leadTxt {
@@ -138,6 +141,82 @@ div#galleryList div.galleryArticle {
 
 
 
+
+
+
+/* 모달레이어 팝업 소스 위치 시작 */
+div.modalBackground {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.modalBackground>div.modalArticle {
+    width: 480px;
+    padding: 40px;
+    /*border: 4px solid #f00;*/
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.modalBackground>.modalArticle>img {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.modalArticle span.modalLeadTxt {
+    color: #a07a56;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.modalBackground>.modalArticle>span.modalPrice {
+    color: #208a88;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+.modalBackground>.modalArticle>span.modalPrice::after {
+    content: " 원";
+    font-size: 16px;
+}
+
+    /* 닫기 버튼 시작 */
+.modalBackground>.modalArticle span.closeBtn {
+    content: "X";
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 26px;
+    border: 4px solid #fff;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    position: absolute;
+    right: -100px;
+    top: -40px;
+
+}
+    /* 닫기 버튼 끝 */
+
+
+/* 모달레이어 팝업 소스 위치 끝 */
 
 
 
